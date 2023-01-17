@@ -1,0 +1,108 @@
+:root {
+  --button-bg-color: #2196f3;
+  --button-bg-color-hover: #1769aa;
+  --height: 36px;
+  --font-size: 16px;
+}
+
+.my-button {
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin: 0.5rem;
+  height: var(--height);
+  font-size: var(--font-size);
+  text-align: center;
+  box-shadow: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-position: center;
+}
+
+/* #region colors */
+.my-button--primary {
+  --button-bg-color: #1976d2;
+  --button-bg-color-hover: #1565c0;
+}
+
+.my-button--secondary {
+  --button-bg-color: #9c27b0;
+  --button-bg-color-hover: #7b1fa2;
+}
+
+.my-button--error {
+  --button-bg-color: #d32f2f;
+  --button-bg-color-hover: #c62828;
+}
+
+.my-button--warning {
+  --button-bg-color: #ed6c02;
+  --button-bg-color-hover: #e65100;
+}
+
+.my-button--info {
+  --button-bg-color: #0288d1;
+  --button-bg-color-hover: #01579b;
+}
+
+.my-button--success {
+  --button-bg-color: #2e7d32;
+  --button-bg-color-hover: #1b5e20;
+}
+/*#endregion*/
+
+/* contained */
+.my-button--contained {
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+}
+
+.my-button--contained:hover {
+  background-color: var(--button-bg-color-hover);
+  transition: 1s;
+}
+
+/* outlined */
+.my-button--outlined {
+  background-color: white;
+  border-color: var(--button-bg-color);
+  color: var(--main-bg-color);
+}
+
+.my-button--outlined:hover {
+  background-color: rgb(233, 244, 255);
+  transition: 1s;
+}
+
+/* text */
+.my-button--text {
+  background-color: transparent;
+  border: none;
+  color: var(--button-bg-color);
+}
+
+.my-button--text:hover {
+  background-color: rgb(233, 244, 255);
+  transition: 1s;
+}
+
+/* size */
+.my-button--small {
+  --height: 24px;
+  --font-size: 12px;
+}
+
+.my-button--medium {
+  --height: 36px;
+  --font-size: 16px;
+}
+
+.my-button--large {
+  --height: 48px;
+  --font-size: 20px;
+}
+
+.my-button:disabled {
+  --button-bg-color: #87898b;
+  --button-bg-color-hover: #87898b;
+}

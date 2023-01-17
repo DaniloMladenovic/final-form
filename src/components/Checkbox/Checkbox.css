@@ -1,0 +1,49 @@
+:root {
+  --bg-color: #2196f3;
+  --bg-color-hover: #1769aa;
+}
+
+.checkbox input[type='checkbox'] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  border: 0.15em solid var(--bg-color);
+  outline: none;
+  cursor: pointer;
+}
+.checkbox input:hover {
+  padding: 0.7em;
+  border: 0.15em solid var(--bg-color-hover);
+}
+
+.checkbox input:checked {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.checkbox input:checked:hover {
+  background-color: var(--bg-color-hover);
+}
+
+.checkbox input:checked::before {
+  content: '\2714';
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  right: 1px;
+  top: -5px;
+}
+
+.checkbox input[type='checkbox']:disabled {
+  background-color: #c0c0c0;
+  border-color: #c0c0c0;
+}
+
+.checkbox input[type='checkbox']:disabled + span {
+  color: #c0c0c0;
+}
