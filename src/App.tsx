@@ -29,6 +29,7 @@ const composeValidators =
 const App = () => (
   <div>
     <Form
+      subscription={{ submitting: true, pristine: true }}
       onSubmit={onSubmit}
       render={({ handleSubmit, form, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit} className="form-container">
