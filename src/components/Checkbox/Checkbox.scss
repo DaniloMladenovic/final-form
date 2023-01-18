@@ -15,35 +15,36 @@
   border: 0.15em solid var(--bg-color);
   outline: none;
   cursor: pointer;
-}
-.checkbox input:hover {
-  padding: 0.7em;
-  border: 0.15em solid var(--bg-color-hover);
-}
 
-.checkbox input:checked {
-  background-color: var(--bg-color);
-  position: relative;
-}
+  &:hover {
+    padding: 0.7em;
+    border: 0.15em solid var(--bg-color-hover);
+  }
 
-.checkbox input:checked:hover {
-  background-color: var(--bg-color-hover);
-}
+  &:checked {
+    background-color: var(--bg-color);
+    position: relative;
 
-.checkbox input:checked::before {
-  content: '\2714';
-  font-size: 1.5em;
-  color: #fff;
-  position: absolute;
-  right: 1px;
-  top: -5px;
-}
+    &:hover {
+      background-color: var(--bg-color-hover);
+    }
 
-.checkbox input[type='checkbox']:disabled {
-  background-color: #c0c0c0;
-  border-color: #c0c0c0;
-}
+    &::before {
+      content: '\2714';
+      font-size: 1.5em;
+      color: #fff;
+      position: absolute;
+      right: 1px;
+      top: -5px;
+    }
+  }
 
-.checkbox input[type='checkbox']:disabled + span {
-  color: #c0c0c0;
+  &:disabled {
+    background-color: #c0c0c0;
+    border-color: #c0c0c0;
+  }
+
+  &:disabled + span {
+    color: #c0c0c0;
+  }
 }
