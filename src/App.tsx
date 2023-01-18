@@ -4,7 +4,7 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import Input from './components/Input/Input';
 import Button from './components/Button/Button';
-import './App.css';
+import './App.scss';
 
 const sleep = (ms: any) => new Promise((resolve) => setTimeout(resolve, ms));
 

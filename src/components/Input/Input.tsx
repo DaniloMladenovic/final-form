@@ -1,4 +1,4 @@
-import './Input.css';
+import './Input.scss';
 import classNames from 'classnames';
 
 type DefaultInputProps = React.DetailedHTMLProps<

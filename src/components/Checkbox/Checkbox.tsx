@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import './Checkbox.css';
+import './Checkbox.scss';
 
 type DefaultInputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,

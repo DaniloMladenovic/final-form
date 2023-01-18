@@ -1,4 +1,4 @@
-import './Button.css';
+import './Button.scss';
 import classNames from 'classnames';
 import { useCallback } from 'react';
 
