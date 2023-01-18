@@ -1,10 +1,9 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
-import React from 'react';
-// import { render } from 'react-dom';
+import './App.scss';
 import { Form, Field } from 'react-final-form';
 import Input from './components/Input/Input';
 import Button from './components/Button/Button';
-import './App.scss';
+import Checkbox from './components/Checkbox/Checkbox';
+import createDecorator from 'final-form-focus';
 
 const sleep = (ms: any) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -13,6 +12,7 @@ const onSubmit = async (values: any) => {
   window.alert(JSON.stringify(values));
 };
 
+const focusOnError = createDecorator();
 const required = (value: any) => (value ? undefined : 'Required');
 const mustBeNumber = (value: any) =>
   isNaN(value) ? 'Must be a number' : undefined;
@@ -31,6 +31,7 @@ const App = () => (
     <Form
       subscription={{ submitting: true, pristine: true }}
       onSubmit={onSubmit}
+      decorators={[focusOnError]}
       render={({ handleSubmit, form, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit} className="form-container">
           <Field name="firstName" validate={required}>
@@ -68,6 +69,8 @@ const App = () => (
               </div>
             )}
           </Field>
+          <Checkbox checked />
+          <Checkbox disabled label="disabled" />
           <div className="field-container">
             <Button type="submit" disabled={submitting}>
               Submit
